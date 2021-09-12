@@ -83,13 +83,7 @@ public class CharacterController2D : MonoBehaviour
 
 			//audioData = GetComponent<AudioSource>();
 			//audioData.Play(0);
-			
-
 		}
-
-
-
-
 
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -155,7 +149,7 @@ public class CharacterController2D : MonoBehaviour
 		
 	}
 
-
+	// currently not working 
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
@@ -163,7 +157,7 @@ public class CharacterController2D : MonoBehaviour
 
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
-		//theScale.x *= -1; This just removes the sprite for whatever reason
+		//! theScale.x *= -1; // !This just removes the sprite for whatever reason
 		transform.localScale = theScale;
 	}
 }

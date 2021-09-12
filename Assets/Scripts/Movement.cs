@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
     {
         
        horizontalMove = Input.GetAxisRaw("Horizontal") * movementspd; // A = -1 and D = 1
-        if (Input.GetButtonDown("Jump")) { 
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") ) { 
             jump = true;
             //Debug.Log("Jumped lol ");
         }
