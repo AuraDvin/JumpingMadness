@@ -20,17 +20,13 @@ public class Movement : MonoBehaviour
     void Update()
     {
         
-       horizontalMove = Input.GetAxisRaw("Horizontal") * movementspd; // A = -1 and D = 1
-        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") ) { 
+        horizontalMove = Input.GetAxisRaw("Horizontal") * movementspd; // A = -1 and D = 1
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2") ) {  // space/W
             jump = true;
-            //Debug.Log("Jumped lol ");
+            //if (Input.GetButtonDown("Jump")) Debug.Log("You pressed Space");
+            //else Debug.Log("You pressed W");
         }
         else jump = false;
-
-    }
-
-    void FixedUpdate(){
-        //Movement of the character (in the Character controller script)
         controller2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
     }
 }
